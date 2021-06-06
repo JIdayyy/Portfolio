@@ -17,15 +17,21 @@ export default function Navbar() {
 
       {isMenu && (
         <ul className="fixed bottom-0 transition-opacity duration-500 hover:opacity-100 opacity-80  z-40 bg-mainColor w-full text-white flex flex-col items-center justify-center align-middle">
-          <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
-            <Link href="/">Accueil</Link>
-          </li>
-          <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
-            <Link href="/about">A Propos</Link>
-          </li>
-          <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
-            <Link href="/project">Projects</Link>
-          </li>
+          <Link href="/">
+            <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+              Accueil
+            </li>
+          </Link>
+          <Link href="/about">
+            <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+              A Propos
+            </li>
+          </Link>
+          <Link href="/project">
+            <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+              Projects
+            </li>
+          </Link>
           <li>
             {" "}
             <a
