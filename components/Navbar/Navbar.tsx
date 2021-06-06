@@ -44,6 +44,12 @@ export default function Navbar() {
               </button>
             </a>
           </li>
+          <li
+            onClick={() => setIsMenu(!isMenu)}
+            className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
+          >
+            Fermer
+          </li>
         </ul>
       )}
 
