@@ -55,9 +55,11 @@ const [isMenu, setIsMenu] = useState(false)
               Project
             </button>
           </Link>
-          <button>
+          <a href="/Abbadie Julien CV.pdf" download="CV_ABBADIE_JULIEN" target="_blank">
+          <button type="button">
             <img className="mx-4" src="/img/cv.png" alt="" />
           </button>
+          </a>
         </li>
       </ul>
     </div>

@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+
 interface IProps {
   name: string;
 }
@@ -8,15 +9,16 @@ export default function Home({ name }: IProps) {
   return (
     <div className="md:px-32 px-4  flex flex-col bg-gradient-to-tr from-grad via-grad2 to-grad items-center justify-center min-h-screen py-2">
       <div className="w-full h-full my-32 md:flex-row  flex flex-col items-center justify-around align-middle">
-        <div className="text-white mx-4">
+        <div className="text-white  mx-4">
           <p className="md:text-4xl text-3xl my-4">Bonjour !</p>
-          <h1 className="md:text-5xl text-4xl my-4">
-            JE SUIS <span className="text-blue font-bold">JULIEN ABBADIE</span>
+          <h1 className="md:text-5xl  text-4xl my-4">
+            JE SUIS <span className="text-blue  font-bold">JULIEN ABBADIE</span>
           </h1>
-          <p className="md:text-2xl w-full text-xl my-4">
-            Développeur{" "}
-            <span className="text-blue font-bold italic">Web React/NodeJs</span>
-          </p>
+          <div className="typewriter text-left">
+            <h2 className="md:text-2xl text-xl my-4">
+            Développeur
+            <span className="text-blue text-left font-bold italic">Web React/NodeJs</span>
+          </h2></div>
         </div>
         <div>
           <img className="my-14 w-96 md:my-0" src="img/webdev.png" alt="" />
@@ -51,7 +53,7 @@ export default function Home({ name }: IProps) {
         </div>
       </div>
 
-      <div className="w-full text-white text-4xl flex  items-center align-middle justify-center">MES <span className="text-blue">RESEAUX</span></div>
+      <div className="w-full text-white text-4xl flex  items-center align-middle justify-center">MES <span className="text-blue mx-3">RESEAUX</span></div>
     <div className="w-full text-white my-24 flex items-center justify-around align-middle">
     <button><img className="w-16" src="img/insta.png" alt="" /></button>
     <button><img className="w-16" src="img/twitter.png" alt="" /></button>
