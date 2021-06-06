@@ -19,15 +19,15 @@ export default function Home({ name }: IProps) {
           </p>
         </div>
         <div>
-          <img className="my-10 w-64 md:my-0" src="img/webdev.png" alt="" />
+          <img className="my-14 w-96 md:my-0" src="img/webdev.png" alt="" />
         </div>
       </div>
 
-      <div className="w-full my-32 h-full md:flex-row  flex flex-col items-center justify-around align-middle">
+      <div className="w-full my-32 h-full md:flex-row flex-col-reverse  flex flex-col items-center justify-around align-middle">
         <div>
-          <img className="w-64" src="img/avatarbig.png" alt="" />
+          <img className="w-80" src="img/avatarbig.png" alt="" />
         </div>
-        <div className="text-white xl:w-4/12 mx-10 md:w-8/12 w-10/12 my-4">
+        <div className="text-white xl:w-6/12 mx-10 md:w-10/12 w-10/12 my-4">
           <h1 className="md:text-5xl text-4xl w-full my-4">
             JE ME <span className="text-blue">PRESENTE</span>
           </h1>
@@ -50,6 +50,16 @@ export default function Home({ name }: IProps) {
           </p>
         </div>
       </div>
+
+      <div className="w-full text-white text-4xl flex  items-center align-middle justify-center">MES <span className="text-blue">RESEAUX</span></div>
+    <div className="w-full text-white my-24 flex items-center justify-around align-middle">
+    <button><img className="w-16" src="img/insta.png" alt="" /></button>
+    <button><img className="w-16" src="img/twitter.png" alt="" /></button>
+    <button><img className="w-16" src="img/linkedin.png" alt="" /></button>
+    <button><img className="w-16"  src="img/fb.png" alt="" /></button>
+    </div>
+
+
     </div>
   );
 }
