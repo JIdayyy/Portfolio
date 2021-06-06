@@ -12,11 +12,12 @@ const [isMenu, setIsMenu] = useState(false)
         <img src="img/burger.png" alt="" />
       </button>}
 
-     {isMenu &&  <button onClick={() => setIsMenu(!isMenu)} className="md:hidden absolute top-8 right-9 z-50 outline-none  w-11">
+    
+
+   {isMenu &&    <ul className="absolute top-0 z-40 bg-mainColor w-full text-white flex flex-col items-center justify-center align-middle">
+   {isMenu &&  <button onClick={() => setIsMenu(!isMenu)} className=" absolute top-8 right-9 z-50 outline-none  w-11">
         <img src="img/burger.png" alt="" />
       </button>}
-
-   {isMenu &&    <ul className="absolute top-0  bg-mainColor w-full text-white flex flex-col items-center justify-center align-middle">
         <li className="border-b hover:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-xl h-full w-full">
         <Link href="/">Accueil</Link>
         </li>
@@ -26,7 +27,12 @@ const [isMenu, setIsMenu] = useState(false)
         <li className="border-b hover:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-xl h-full w-full">
         <Link href="/project">Projects</Link>
         </li>
-     
+        <li> <a href="/Abbadie Julien CV.pdf" download="CV_ABBADIE_JULIEN" target="_blank">
+          <button className="py-4 " type="button">
+            Télécharger Mon CV
+          </button>
+          </a></li>
+  
     
        
       </ul>}
@@ -55,11 +61,11 @@ const [isMenu, setIsMenu] = useState(false)
               Project
             </button>
           </Link>
-          <a href="/Abbadie Julien CV.pdf" download="CV_ABBADIE_JULIEN" target="_blank">
+         <li> <a href="/Abbadie Julien CV.pdf" download="CV_ABBADIE_JULIEN" target="_blank">
           <button type="button">
-            <img className="mx-4" src="/img/cv.png" alt="" />
+            <img className="mx-10 top-7  right-10" src="/img/cv.png" alt="" />
           </button>
-          </a>
+          </a></li>
         </li>
       </ul>
     </div>
