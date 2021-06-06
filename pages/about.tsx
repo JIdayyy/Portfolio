@@ -39,7 +39,7 @@ export default function about() {
             </li>
           </ul>
         </div>
-        <img className="w-60 my-6" src="img/aboutpic.png" alt="" />
+        <img className="w-64 my-6 mx-10" src="img/me.png" alt="" />
       </div>
       <div className="w-full text-white flex flex-col items-center align-middle justify-center ">
         <h1 className="text-3xl my-8">
