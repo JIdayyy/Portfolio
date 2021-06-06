@@ -8,7 +8,7 @@ interface IProps {
 
 export default function Layout({ page, children }: IProps) {
   return (
-    <div>
+    <div className="w-full ">
       <Head>
         <title>{page}</title>
       </Head>

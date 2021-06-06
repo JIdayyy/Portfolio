@@ -23,7 +23,9 @@
     50% { border-color: white }
   }
 
-
+.bg-perso{
+  background-image: url('/img/background.png');
+}
 
   .wave {
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
