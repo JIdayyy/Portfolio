@@ -29,6 +29,9 @@ export default function Navbar() {
                 Project
               </button>
             </Link>
+            <button>
+              <img className="mx-4" src="/img/cv.png" alt="" />
+            </button>
           </li>
         </ul>
       </div>
