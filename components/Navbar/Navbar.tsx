@@ -1,11 +1,16 @@
 import Link from "next/link";
 
+
+
+
+
+
 export default function Navbar() {
   return (
-    <div className="h-20 bg-mainColor w-full flex items-center align-middle justify-around ">
+    <div className="h-20 bg-mainColor  w-full flex items-center align-middle justify-around ">
       <div className="text-4xl  font-bold text-blue">Ja.</div>
       <div>
-        <ul className="flex">
+        <ul className=" flex">
           <li className="text-white items-center align-middle justify-center  flex mx-4 text-xl">
             <img className="w-4 h-4 mx-2" src="img/home.png" alt="" />
             <Link href="/">
