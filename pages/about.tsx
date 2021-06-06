@@ -43,7 +43,8 @@ export default function about() {
       </div>
       <div className="w-full text-white flex flex-col items-center align-middle justify-center ">
         <h1 className="text-3xl my-8">
-          Compétences <span className="text-blue">Techs</span>
+          Compétences <span className="text-blue">Techs</span>{" "}
+          <img className="w-10 wave" src="img/settings.png" alt="" />
         </h1>
 
         <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-2 mb-24 grid-cols-4">
@@ -70,6 +71,25 @@ export default function about() {
           </div>
           <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
             Prisma
+          </div>
+        </div>
+
+        <h1 className="flex  items-center justify-center align-middle text-3xl my-8">
+          Les <span className="text-blue">outils</span> que j'utilise{" "}
+          <img className="w-10 wave mx-4" src="img/tool.png" alt="" />
+        </h1>
+        <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-1 mb-24 grid-cols-4">
+          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md text-blue  items-center align-middle justify-center">
+            VS CODE
+          </div>
+          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+            Figma
+          </div>
+          <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
+            WINDOWS/OSX
+          </div>
+          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+            Linux
           </div>
         </div>
       </div>
