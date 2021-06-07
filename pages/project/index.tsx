@@ -13,10 +13,11 @@ export default function project() {
             <h2 className="text-base my-2">Wizic</h2>
             <p className="text-xs h-24 my-1">
               Une web app spotify Like qui propose l’upload et l’écoute de
-              musique ainsi que la création et l’administration de
-              playlists.Développé from scratch avec ReactJs.
+              musique ainsi que la création et l’administration de playlists.
+              <br></br>
+              Développé from scratch avec ReactJs.
             </p>
-            <Link href="/project/2">
+            <Link href="">
               <button className="py-2 px-4 bg-blue border border-white rounded-md my-4">
                 VISITER
               </button>
@@ -31,7 +32,7 @@ export default function project() {
               Un Site web AirBnB Like qui propose la mise à disposition de surf
               camp aux voyageurs et surfeurs autour du monde.
             </p>
-            <Link href="/project/3">
+            <Link href="">
               <button className="py-2 px-4 bg-blue border border-white rounded-md my-4">
                 VISITER
               </button>
