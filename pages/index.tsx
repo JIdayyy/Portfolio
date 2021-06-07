@@ -1,12 +1,25 @@
 import Head from "next/head";
-
+import { useState, useEffect } from "react";
 interface IProps {
   name: string;
 }
 
 export default function Home({ name }: IProps) {
+  const [isScroll, setIsScroll] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
   return (
-    <div className="md:px-32 mt-20 xl:px-40 px-4 bg-perso flex flex-col items-center justify-center min-h-screen py-2">
+    <div
+      onWheel={handleScroll}
+      className="md:px-32 mt-20 xl:px-40 px-4 bg-perso flex flex-col items-center justify-center min-h-screen py-2"
+    >
       <div className="w-full h-full my-32 md:flex-row  flex flex-col items-center justify-around align-middle">
         <div className="text-white   md:mx-4">
           <span className="flex items-start align-middle ">

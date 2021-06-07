@@ -2,17 +2,22 @@ import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Navbar() {
+export default function Navbar({ isScroll }) {
   const [isMenu, setIsMenu] = useState(false);
   const [isModal, setIsModal] = useState(false);
+
   return (
-    <div className="h-20 bg-mainColor w-full flex items-center fixed top-0 align-middle justify-around ">
+    <div
+      className={`${
+        isScroll && "bg-opacity-60"
+      } h-20 bg-mainColor w-full flex items-center fixed top-0 align-middle justify-around `}
+    >
       {isModal && (
         <div className="fixed flex flex-col items-center justify-center align-middle top-0 text-white z-50 w-full bg-black bg-opacity-90 min-h-screen">
           <div className="bg-indigo-900 relative w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
             <button onClick={() => setIsModal(false)}>
               <img
-                className="w-5 absolute  transform translate-x-20 -translate-y-7"
+                className="w-5 absolute outline-none focus:outline-none  transform translate-x-20 -translate-y-7"
                 src="img/cross.png"
                 alt=""
               />
@@ -26,7 +31,7 @@ export default function Navbar() {
               target="_blank"
             >
               <button
-                className="border bg-indigo-400 hover:bg-indigo-600 mt-20 py-2 px-4 rounded-md my-9"
+                className="border outline-none focus:outline-none bg-indigo-400 hover:bg-indigo-600 mt-20 py-2 px-4 rounded-md my-9"
                 type="button"
               >
                 Télécharger
@@ -46,7 +51,7 @@ export default function Navbar() {
       {isMenu && (
         <ul className="fixed bottom-0 transition-opacity duration-500 hover:opacity-100 opacity-80  z-40 bg-mainColor w-full text-white flex flex-col items-center justify-center align-middle">
           <Link href="/">
-            <li className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+            <li className="border-b  hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
               Accueil
             </li>
           </Link>
@@ -67,7 +72,10 @@ export default function Navbar() {
               download="CV_ABBADIE_JULIEN"
               target="_blank"
             >
-              <button className="py-4" type="button">
+              <button
+                className="py-4 outline-none focus:outline-none"
+                type="button"
+              >
                 Télécharger Mon CV
               </button>
             </a>
@@ -85,7 +93,7 @@ export default function Navbar() {
         <li className="text-white items-center align-middle justify-center  flex mx-4 text-2xl">
           <img className="w-6 h-5 mx-2" src="img/home.png" alt="" />
           <Link href="/">
-            <button className="hover:border-blue text-lg  border-transparent border-b">
+            <button className="hover:border-blue outline-none focus:outline-none text-lg  border-transparent border-b">
               Accueil
             </button>
           </Link>
@@ -93,7 +101,7 @@ export default function Navbar() {
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
           <img className="w-5 h-5 mx-2" src="img/avatar.png" alt="" />
           <Link href="/about">
-            <button className="hover:border-blue text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
               A Propos
             </button>
           </Link>
@@ -101,12 +109,16 @@ export default function Navbar() {
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
           <img className="w-6 h-5 mx-2" src="img/tv.png" alt="" />
           <Link href="/project">
-            <button className="hover:border-blue text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
           </Link>
           <li>
-            <button onClick={() => setIsModal(true)} type="button">
+            <button
+              className="outline-none focus:outline-none"
+              onClick={() => setIsModal(true)}
+              type="button"
+            >
               <img
                 className="mx-10 w-14 top-7  right-10"
                 src="/img/cv.png"
