@@ -23,16 +23,27 @@
     50% { border-color: white }
   }
 
+  .zindex{
+    z-index: 500;
+  }
+
+  .zindex0{
+    z-index: -10 !important;
+  }
+
 .bg-perso{
   background-image: url('/img/background.png');
 }
 
+
+
   .wave {
+    z-index: 0 !important;
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
     animation-duration: 2.1s; /* Change to speed up or slow down */
     animation-iteration-count: infinite; /* Never stop waving :) */
     transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-    display: inline-block;
+  
   }
   
   @keyframes wave-animation {
@@ -60,4 +71,31 @@
     100% {
       transform: rotate(0deg);
     }
+  }
+
+
+
+  .hypnotic-2 {
+    width: 60px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: grid;
+    animation: h2 2s infinite linear;
+  }
+  .hypnotic-2:before,
+  .hypnotic-2:after {
+    content:"";
+    grid-area: 1/1;
+    border:inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 3s;
+  }
+  .hypnotic-2:after {
+    --s:-1;
+  }
+  
+  @keyframes h2 {
+     100% {transform:rotate(calc(var(--s,1)*1turn))}
   }

@@ -42,9 +42,9 @@ export default function about() {
         <img className="w-64 my-6 mx-10" src="img/me.png" alt="" />
       </div>
       <div className="w-full text-white flex flex-col items-center align-middle justify-center ">
-        <h1 className="text-3xl my-8">
+        <h1 className="text-3xl flex items-center justify-center align-middle  w-full my-8">
           Compétences <span className="text-blue">Techs</span>{" "}
-          <img className="w-5 xl:w-8 wave" src="img/settings.png" alt="" />
+          <img className="w-5 xl:w-8 mx-4 wave" src="img/settings.png" alt="" />
         </h1>
 
         <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-2 mb-24 grid-cols-4">
