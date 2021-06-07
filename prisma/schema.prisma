@@ -11,7 +11,7 @@ generator client {
 }
 
 model Project {
-  id Int @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   title     String    @db.VarChar(255)
   createdAt DateTime  @default(now()) @db.Timestamp(6)
   content   String?
@@ -19,7 +19,7 @@ model Project {
   authorId  Int
   User      User      @relation(fields: [authorId], references: [id])
   Pictures  Picture[]
-
+  Techs     Tech[]
 }
 
 model User {
@@ -30,8 +30,16 @@ model User {
 }
 
 model Picture {
-  id         Int    @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   pictureUrl String
-  Project   Project? @relation(fields: [projectId], references: [id])
-  projectId Int?
+  Project    Project? @relation(fields: [projectId], references: [id])
+  projectId  Int?
+}
+
+model Tech {
+  id         Int      @id @default(autoincrement())
+  name       String?
+  pictureUrl String
+  Project    Project? @relation(fields: [projectId], references: [id])
+  projectId  Int?
 }

@@ -15,7 +15,8 @@ interface IEvent {
 interface IProject {
   title: string,
   content: string,
-  Pictures: Array<Picture>
+  Pictures: Array<Picture>,
+  createdAt: Date,
 }
 interface Picture {
    pictureUrl: string

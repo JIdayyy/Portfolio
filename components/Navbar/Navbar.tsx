@@ -2,6 +2,7 @@ import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from 'next/image'
+
 export default function Navbar({ isScroll }: IProps) {
   const [isMenu, setIsMenu] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -13,18 +14,14 @@ export default function Navbar({ isScroll }: IProps) {
       } h-20 bg-mainColor w-full flex zindex items-center fixed top-0 align-middle justify-around `}
     >
       {isModal && (
-        <div className="fixed zindex flex flex-col items-center justify-center align-middle top-0 text-white w-full bg-black bg-opacity-90 min-h-screen">
-          <div className="bg-indigo-900 bg-opacity-50 relative w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
-            <button onClick={() => setIsModal(false)}>
-              <img
-                className="w-5 absolute outline-none focus:outline-none  transform translate-x-20 -translate-y-7"
-                src="img/cross.png"
-                alt=""
-              />
+        <div className="absolute  flex flex-col items-center justify-center align-middle top-0 text-white w-full bg-black bg-opacity-90 min-h-screen">
+          <div className="bg-indigo-900 relative  bg-opacity-20  w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
+            <button className="absolute top-0 left-0 " onClick={() => setIsModal(false)}>
+             <Image src="/img/cross.png" width={15} height={15}/>
             </button>
 
             <h3 className="mt-10">Téléchargez mon CV :</h3>
-            <p className="text-xs my-2">( Format .pdf )</p>
+            <p className="text-xs mt-20">( Format .pdf )</p>
             <a
               href="/Abbadie Julien CV.pdf"
               download="CV_ABBADIE_JULIEN"
@@ -95,7 +92,7 @@ export default function Navbar({ isScroll }: IProps) {
         
           <Image src="/img/home.png" width={23} height={20}/>
           <Link href="/">
-            <button className="hover:border-blue outline-none focus:outline-none text-lg  border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg  border-transparent border-b">
               Accueil
             </button>
           </Link>
@@ -104,7 +101,7 @@ export default function Navbar({ isScroll }: IProps) {
        
           <Image  width={23} height={20} src="/img/avatar.png" />
           <Link href="/about">
-            <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
               A Propos
             </button>
           </Link>
@@ -113,7 +110,7 @@ export default function Navbar({ isScroll }: IProps) {
          
           <Image width={23} height={20} src="/img/tv.png" />
           <Link href="/project/">
-            <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
           </Link>
