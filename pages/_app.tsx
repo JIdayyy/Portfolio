@@ -1,13 +1,16 @@
 import { AppProps } from "next/app";
 import "tailwindcss/tailwind.css";
 import Layout from "../components/Layout/Layout";
-import "../styles/index.css"
+import "../styles/index.css";
+import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider session={pageProps.session}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
   );
 }
 

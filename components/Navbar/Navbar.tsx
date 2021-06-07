@@ -1,12 +1,13 @@
 import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
-import { useState, useEffect,FunctionComponent } from "react";
-import Image from 'next/image'
+import { useState, useEffect, FunctionComponent } from "react";
+import { session, signIn, signOut, useSession } from "next-auth/client";
+import Image from "next/image";
 
-
- const Navbar:FunctionComponent<IProps> = ({ isScroll }: IProps) =>{
+const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
   const [isMenu, setIsMenu] = useState<boolean>(false);
-  const [isModal, setIsModal] = useState<boolean>(false); 
+  const [isModal, setIsModal] = useState<boolean>(false);
+  const [session, loading] = useSession();
 
   return (
     <div
@@ -124,7 +125,13 @@ import Image from 'next/image'
               Project
             </button>
           </Link>
-
+          <Image src="/img/admin.png" width={20} height={20} />
+          <Link href="/login">
+            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+              Admin
+            </button>
+          </Link>
+          {session && session.user.name}
           <button
             className="outline-none focus:outline-none"
             onClick={() => setIsModal(true)}
@@ -140,5 +147,5 @@ import Image from 'next/image'
       </ul>
     </div>
   );
-}
-export default Navbar
+};
+export default Navbar;

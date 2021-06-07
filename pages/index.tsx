@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-
+import { session, signIn, signOut, useSession } from "next-auth/client";
 export default function Home({ name }: IProps) {
   const [isScroll, setIsScroll] = useState(false);
+  const [session, loading] = useSession();
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -27,6 +28,7 @@ export default function Home({ name }: IProps) {
               alt=""
             />
           </span>
+
           <h1 className=" xl:text-4xl mx-4 sm:mx-0 md:text-2xl sm:text-2xl text-2xl my-2">
             JE SUIS <span className="text-blue  font-bold">JULIEN ABBADIE</span>
           </h1>
