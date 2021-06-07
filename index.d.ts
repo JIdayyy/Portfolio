@@ -1,5 +1,6 @@
 interface IProps {
   isScroll: boolean;
+  name: string;
 }
 
 interface IEvent {
