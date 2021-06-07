@@ -9,7 +9,7 @@ interface IProps {
 
 export default function Layout({ page, children }: IProps) {
   const [isScroll, setIsScroll] = useState(false);
-  const handleScroll = (e) => {
+  const handleScroll = (e: IEvent) => {
     if (e.deltaY > 0) {
       setIsScroll(true);
     } else {

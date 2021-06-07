@@ -2,7 +2,7 @@ import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Navbar({ isScroll }) {
+export default function Navbar({ isScroll }: IProps) {
   const [isMenu, setIsMenu] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
