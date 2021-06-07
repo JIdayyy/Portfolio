@@ -21,7 +21,11 @@ export default function Home({ name }: IProps) {
         <div className="text-white   md:mx-4">
           <span className="flex items-start align-middle ">
             <p className="md:text-2xl text-2xl mx-4 sm:mx-0 my-4">Bonjour !</p>
-            <img className="w-11 mx-4 zindex0 z-0 wave" src="img/main.png" alt="" />
+            <img
+              className="w-11 mx-4 zindex0 z-0 wave"
+              src="img/main.png"
+              alt=""
+            />
           </span>
           <h1 className=" xl:text-4xl mx-4 sm:mx-0 md:text-2xl sm:text-2xl text-2xl my-2">
             JE SUIS <span className="text-blue  font-bold">JULIEN ABBADIE</span>
@@ -49,21 +53,21 @@ export default function Home({ name }: IProps) {
             JE ME <span className="text-blue">PRESENTE</span>
           </h1>
           <p className="md:text-sm xl:text-xl w-full text-base my-4">
-            Je suis tombé amoureux du développement et j’apprend tous les jours
+            Je suis tombé amoureux du développement et j’apprends tous les jours
             en pratiquant...
             <br></br>
             <br></br>
             Compétent en <span className="text-blue italic">front/back</span> et
             plus particulièrement sur les technos{" "}
             <span className="text-blue italic">React/NodeJs</span> je me forme
-            aussi en parrallèle sur d’autres outils à la mode tels que{" "}
+            aussi en parallèle sur d’autres outils à la mode tels que{" "}
             <span className="text-blue italic">NextJs</span> ou
             <span className="mx-1 text-blue italic">Python...</span>
             <br></br>
             <br></br>
-            Curieux de nature j’aime entreprendre de nouveaux projets ou
-            compétences comme l’UI/UX ou le design et je n’ai pas peur
-            d’apprendre pour évoluer.
+            Curieux de nature j’aime entreprendre de nouveaux projets et
+            développer de nouvelles compétences comme l’UI/UX, le design et je
+            n’ai pas peur d’apprendre pour évoluer.
           </p>
         </div>
       </div>
