@@ -15,7 +15,7 @@ export default function Layout({ page, children }: IProps) {
     } else {
       setIsScroll(false);
     }
-    console.log(isScroll);
+    
   };
 
   return (
