@@ -24,7 +24,7 @@ export default function Home({ name }: IProps) {
         <div className="text-white   md:mx-4">
           <span className="flex items-start align-middle ">
             <p className="md:text-2xl text-2xl mx-4 sm:mx-0 my-4">Bonjour !</p>
-            <img className="w-11 mx-4 wave" src="img/main.png" alt="" />
+            <img className="w-11 mx-4 zindex0 z-0 wave" src="img/main.png" alt="" />
           </span>
           <h1 className=" xl:text-4xl mx-4 sm:mx-0 md:text-2xl sm:text-2xl text-2xl my-2">
             JE SUIS <span className="text-blue  font-bold">JULIEN ABBADIE</span>

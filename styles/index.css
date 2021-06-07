@@ -23,16 +23,27 @@
     50% { border-color: white }
   }
 
+  .zindex{
+    z-index: 500;
+  }
+
+  .zindex0{
+    z-index: -10 !important;
+  }
+
 .bg-perso{
   background-image: url('/img/background.png');
 }
 
+
+
   .wave {
+    z-index: 0 !important;
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
     animation-duration: 2.1s; /* Change to speed up or slow down */
     animation-iteration-count: infinite; /* Never stop waving :) */
     transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-    display: inline-block;
+  
   }
   
   @keyframes wave-animation {
