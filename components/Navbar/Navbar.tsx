@@ -114,7 +114,7 @@ export default function Navbar({ isScroll }: IProps) {
               Project
             </button>
           </Link>
-          <li>
+          
             <button
               className="outline-none focus:outline-none"
               onClick={() => setIsModal(true)}
@@ -126,7 +126,7 @@ export default function Navbar({ isScroll }: IProps) {
                 alt=""
               />
             </button>
-          </li>
+         
         </li>
       </ul>
     </div>
