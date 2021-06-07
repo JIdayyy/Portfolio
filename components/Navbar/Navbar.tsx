@@ -11,14 +11,17 @@ import Image from 'next/image'
   return (
     <div
       className={`${
-        (isScroll && !isMenu) && "bg-opacity-60"
+        isScroll && !isMenu && "bg-opacity-60"
       } h-20 bg-mainColor w-full flex zindex items-center fixed top-0 align-middle justify-around `}
     >
       {isModal && (
         <div className="absolute  flex flex-col items-center justify-center align-middle top-0 text-white w-full bg-black bg-opacity-90 min-h-screen">
           <div className="bg-indigo-900 relative  bg-opacity-20  w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
-            <button className="absolute top-3 right-3 " onClick={() => setIsModal(false)}>
-             <Image src="/img/cross.png" width={10} height={10}/>
+            <button
+              className="absolute top-3 right-3 "
+              onClick={() => setIsModal(false)}
+            >
+              <Image src="/img/cross.png" width={10} height={10} />
             </button>
 
             <h3 className="mt-10">Téléchargez mon CV :</h3>
@@ -49,17 +52,26 @@ import Image from 'next/image'
       {isMenu && (
         <ul className="fixed top-20 transition-opacity duration-500 hover:opacity-100 opacity-80   bg-mainColor w-full text-white flex flex-col items-center justify-center align-middle">
           <Link href="/">
-            <li onClick={() => setIsMenu(!isMenu)} className="border-b  hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+            <li
+              onClick={() => setIsMenu(!isMenu)}
+              className="border-b  hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
+            >
               Accueil
             </li>
           </Link>
           <Link href="/about">
-            <li onClick={() => setIsMenu(!isMenu)} className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+            <li
+              onClick={() => setIsMenu(!isMenu)}
+              className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
+            >
               A Propos
             </li>
           </Link>
           <Link href="/project">
-            <li  onClick={() => setIsMenu(!isMenu)}className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full">
+            <li
+              onClick={() => setIsMenu(!isMenu)}
+              className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
+            >
               Projects
             </li>
           </Link>
@@ -90,8 +102,7 @@ import Image from 'next/image'
 
       <ul className="hidden md:flex ">
         <li className="text-white items-center align-middle justify-center  flex mx-4 text-2xl">
-        
-          <Image src="/img/home.png" width={23} height={20}/>
+          <Image src="/img/home.png" width={23} height={20} />
           <Link href="/">
             <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg  border-transparent border-b">
               Accueil
@@ -99,8 +110,7 @@ import Image from 'next/image'
           </Link>
         </li>
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-       
-          <Image  width={23} height={20} src="/img/avatar.png" />
+          <Image width={23} height={20} src="/img/avatar.png" />
           <Link href="/about">
             <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
               A Propos
@@ -108,26 +118,24 @@ import Image from 'next/image'
           </Link>
         </li>
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-         
           <Image width={23} height={20} src="/img/tv.png" />
           <Link href="/project/">
             <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
           </Link>
-          
-            <button
-              className="outline-none focus:outline-none"
-              onClick={() => setIsModal(true)}
-              type="button"
-            >
-              <img
-                className="mx-10 w-14 top-7  right-10"
-                src="/img/cv.png"
-                alt=""
-              />
-            </button>
-         
+
+          <button
+            className="outline-none focus:outline-none"
+            onClick={() => setIsModal(true)}
+            type="button"
+          >
+            <img
+              className="mx-10 w-14 top-7  right-10"
+              src="/img/cv.png"
+              alt=""
+            />
+          </button>
         </li>
       </ul>
     </div>
