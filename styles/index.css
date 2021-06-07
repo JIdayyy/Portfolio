@@ -72,3 +72,30 @@
       transform: rotate(0deg);
     }
   }
+
+
+
+  .hypnotic-2 {
+    width: 60px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: grid;
+    animation: h2 2s infinite linear;
+  }
+  .hypnotic-2:before,
+  .hypnotic-2:after {
+    content:"";
+    grid-area: 1/1;
+    border:inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 3s;
+  }
+  .hypnotic-2:after {
+    --s:-1;
+  }
+  
+  @keyframes h2 {
+     100% {transform:rotate(calc(var(--s,1)*1turn))}
+  }

@@ -16,8 +16,8 @@ export default function Navbar({ isScroll }: IProps) {
       {isModal && (
         <div className="absolute  flex flex-col items-center justify-center align-middle top-0 text-white w-full bg-black bg-opacity-90 min-h-screen">
           <div className="bg-indigo-900 relative  bg-opacity-20  w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
-            <button className="absolute top-0 left-0 " onClick={() => setIsModal(false)}>
-             <Image src="/img/cross.png" width={15} height={15}/>
+            <button className="absolute top-3 right-3 " onClick={() => setIsModal(false)}>
+             <Image src="/img/cross.png" width={10} height={10}/>
             </button>
 
             <h3 className="mt-10">Téléchargez mon CV :</h3>
