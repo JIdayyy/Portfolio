@@ -113,19 +113,18 @@ export default function Navbar({ isScroll }: IProps) {
               Project
             </button>
           </Link>
-          <li>
-            <button
-              className="outline-none focus:outline-none"
-              onClick={() => setIsModal(true)}
-              type="button"
-            >
-              <img
-                className="mx-10 w-14 top-7  right-10"
-                src="/img/cv.png"
-                alt=""
-              />
-            </button>
-          </li>
+
+          <button
+            className="outline-none focus:outline-none"
+            onClick={() => setIsModal(true)}
+            type="button"
+          >
+            <img
+              className="mx-10 w-14 top-7  right-10"
+              src="/img/cv.png"
+              alt=""
+            />
+          </button>
         </li>
       </ul>
     </div>
