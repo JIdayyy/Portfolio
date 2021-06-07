@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -5,9 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...colors,
         bginput: "#28292A",
         mainColor: "#181A27",
         grad: "#181A27",
+        black: "#000000",
         grad2: "#202338",
         blue: "#8796F2",
         bgPlaybar: "#1F1F1F",
@@ -19,6 +23,7 @@ module.exports = {
   variants: {
     extend: {
       outline: ["active", "focus"],
+      backgroundColor: ["hover"],
     },
   },
   plugins: [],

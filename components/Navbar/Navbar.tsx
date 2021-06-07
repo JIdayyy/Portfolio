@@ -4,10 +4,38 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
+  const [isModal, setIsModal] = useState(false);
   return (
     <div className="h-20 bg-mainColor w-full flex items-center fixed top-0 align-middle justify-around ">
-      <div className="text-4xl  font-bold text-blue">Ja.</div>
+      {isModal && (
+        <div className="fixed flex flex-col items-center justify-center align-middle top-0 text-white z-50 w-full bg-black bg-opacity-90 min-h-screen">
+          <div className="bg-indigo-900 relative w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
+            <button onClick={() => setIsModal(false)}>
+              <img
+                className="w-5 absolute  transform translate-x-20 -translate-y-7"
+                src="img/cross.png"
+                alt=""
+              />
+            </button>
 
+            <h3 className="mt-10">Téléchargez mon CV :</h3>
+            <p className="text-xs my-2">( Format .pdf )</p>
+            <a
+              href="/Abbadie Julien CV.pdf"
+              download="CV_ABBADIE_JULIEN"
+              target="_blank"
+            >
+              <button
+                className="border bg-indigo-400 hover:bg-indigo-600 mt-20 py-2 px-4 rounded-md my-9"
+                type="button"
+              >
+                Télécharger
+              </button>
+            </a>
+          </div>
+        </div>
+      )}
+      <div className="text-4xl  font-bold text-blue">Ja.</div>
       <button
         onClick={() => setIsMenu(!isMenu)}
         className="md:hidden outline-none transform  translate-x-20 w-11"
@@ -78,20 +106,15 @@ export default function Navbar() {
             </button>
           </Link>
           <li>
-            {" "}
-            <a
+            {/* <a
               href="/Abbadie Julien CV.pdf"
               download="CV_ABBADIE_JULIEN"
               target="_blank"
-            >
-              <button type="button">
-                <img
-                  className="mx-10 top-7  right-10"
-                  src="/img/cv.png"
-                  alt=""
-                />
-              </button>
-            </a>
+            > */}
+            <button onClick={() => setIsModal(true)} type="button">
+              <img className="mx-10 top-7  right-10" src="/img/cv.png" alt="" />
+            </button>
+            {/* </a> */}
           </li>
         </li>
       </ul>
