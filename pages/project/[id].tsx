@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 import Image from 'next/image'
+import {GetServerSideProps} from 'next'
 
 export default function myProject({title,content,Pictures,createdAt }:IProject) {
     return(
@@ -15,7 +16,7 @@ export default function myProject({title,content,Pictures,createdAt }:IProject) 
           )
 };
 
-export async function getServerSideProps(context){
+export const getServerSideProps: GetServerSideProps = async (context) => {
     const {id} = context.query
     let project = await prisma.project.findUnique({
         where: {
@@ -29,7 +30,7 @@ export async function getServerSideProps(context){
     let {title,content,createdAt,Pictures} = project
 
     createdAt = createdAt.toString()
-    
+
     return{
         props: {
            title,content,Pictures,createdAt

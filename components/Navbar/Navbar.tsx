@@ -1,11 +1,12 @@
 import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect,FunctionComponent } from "react";
 import Image from 'next/image'
 
-export default function Navbar({ isScroll }: IProps) {
-  const [isMenu, setIsMenu] = useState(false);
-  const [isModal, setIsModal] = useState(false);
+
+ const Navbar:FunctionComponent<IProps> = ({ isScroll }: IProps) =>{
+  const [isMenu, setIsMenu] = useState<boolean>(false);
+  const [isModal, setIsModal] = useState<boolean>(false); 
 
   return (
     <div
@@ -132,3 +133,4 @@ export default function Navbar({ isScroll }: IProps) {
     </div>
   );
 }
+export default Navbar
