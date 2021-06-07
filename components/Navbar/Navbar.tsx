@@ -82,9 +82,10 @@ export default function Navbar({ isScroll }: IProps) {
           </li>
           <li
             onClick={() => setIsMenu(!isMenu)}
-            className="border-b hover:bg-indigo-900 active:bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
+            className="border-b flex items-center justify-center align-middle hover:bg-indigo-900 bg-opacity-100 opacity-100 bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
           >
             Fermer
+            <img src="img/cross.png" className="w-5" alt="" />
           </li>
         </ul>
       )}
