@@ -1,7 +1,7 @@
 import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-
+import Image from 'next/image'
 export default function Navbar({ isScroll }: IProps) {
   const [isMenu, setIsMenu] = useState(false);
   const [isModal, setIsModal] = useState(false);
@@ -92,7 +92,8 @@ export default function Navbar({ isScroll }: IProps) {
 
       <ul className="hidden md:flex ">
         <li className="text-white items-center align-middle justify-center  flex mx-4 text-2xl">
-          <img className="w-6 h-5 mx-2" src="img/home.png" alt="" />
+        
+          <Image src="/img/home.png" width={23} height={20}/>
           <Link href="/">
             <button className="hover:border-blue outline-none focus:outline-none text-lg  border-transparent border-b">
               Accueil
@@ -100,7 +101,8 @@ export default function Navbar({ isScroll }: IProps) {
           </Link>
         </li>
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <img className="w-5 h-5 mx-2" src="img/avatar.png" alt="" />
+       
+          <Image  width={23} height={20} src="/img/avatar.png" />
           <Link href="/about">
             <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
               A Propos
@@ -108,8 +110,9 @@ export default function Navbar({ isScroll }: IProps) {
           </Link>
         </li>
         <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <img className="w-6 h-5 mx-2" src="img/tv.png" alt="" />
-          <Link href="/project">
+         
+          <Image width={23} height={20} src="/img/tv.png" />
+          <Link href="/project/">
             <button className="hover:border-blue outline-none focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
