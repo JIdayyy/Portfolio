@@ -1,8 +1,5 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-interface IProps {
-  name: string;
-}
 
 export default function Home({ name }: IProps) {
   const [isScroll, setIsScroll] = useState(false);

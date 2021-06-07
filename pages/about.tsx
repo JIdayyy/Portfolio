@@ -49,13 +49,13 @@ export default function about() {
 
         <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-2 mb-24 grid-cols-4">
           <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md text-blue  items-center align-middle justify-center">
-            HTML
+            HTML/CSS
           </div>
           <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
-            CSS
+            JS.
           </div>
           <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
-            JS.
+            TypeScript.
           </div>
           <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
             ReactJs
