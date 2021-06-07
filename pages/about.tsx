@@ -43,7 +43,7 @@ export default function about() {
       </div>
       <div className="w-full text-white flex flex-col items-center align-middle justify-center ">
         <h1 className="text-3xl flex items-center justify-center align-middle  w-full my-8">
-          Compétences <span className="text-blue">Techs</span>{" "}
+          Compétences <span className="mx-2 text-blue">Tech</span>{" "}
           <img className="w-5 xl:w-8 mx-4 wave" src="img/settings.png" alt="" />
         </h1>
 
