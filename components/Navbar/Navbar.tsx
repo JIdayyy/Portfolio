@@ -14,7 +14,7 @@ export default function Navbar({ isScroll }: IProps) {
     >
       {isModal && (
         <div className="fixed zindex flex flex-col items-center justify-center align-middle top-0 text-white w-full bg-black bg-opacity-90 min-h-screen">
-          <div className="bg-indigo-900 relative w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
+          <div className="bg-indigo-900 bg-opacity-50 relative w-60 pt-10 h-80 flex flex-col items-center justify-around align-middle font-bold rounded">
             <button onClick={() => setIsModal(false)}>
               <img
                 className="w-5 absolute outline-none focus:outline-none  transform translate-x-20 -translate-y-7"
