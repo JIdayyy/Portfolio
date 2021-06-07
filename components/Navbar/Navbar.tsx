@@ -67,7 +67,7 @@ export default function Navbar() {
               download="CV_ABBADIE_JULIEN"
               target="_blank"
             >
-              <button className="py-4 " type="button">
+              <button className="py-4" type="button">
                 Télécharger Mon CV
               </button>
             </a>
@@ -106,15 +106,13 @@ export default function Navbar() {
             </button>
           </Link>
           <li>
-            {/* <a
-              href="/Abbadie Julien CV.pdf"
-              download="CV_ABBADIE_JULIEN"
-              target="_blank"
-            > */}
             <button onClick={() => setIsModal(true)} type="button">
-              <img className="mx-10 top-7  right-10" src="/img/cv.png" alt="" />
+              <img
+                className="mx-10 w-14 top-7  right-10"
+                src="/img/cv.png"
+                alt=""
+              />
             </button>
-            {/* </a> */}
           </li>
         </li>
       </ul>
