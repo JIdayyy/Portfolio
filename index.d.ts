@@ -18,6 +18,7 @@ interface IProject {
   Pictures: Array<Picture>,
   createdAt: Date,
 }
+
 interface Picture {
    pictureUrl: string
 }
