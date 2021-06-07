@@ -1,9 +1,7 @@
 export default function project() {
   return <div className="w-full h-full pt-40 flex flex-col  text-white items-center align-middle justify-center min-h-screen bg-perso">
                   <h1>Mes <span className="text-blue my-7">Projets</span> Récents</h1>
-
              <div className="flex flex-col md:flex-row items-center align-middle justify-center">
-
               <div className="flex flex-col m-4  items-center my-7 justify-center align-middle">
                   <div className="bg-black bg-opacity-20 w-80 rounded-xl flex flex-col items-center align-middle justify-center p-10">
                      <img className="w-96 h-32" src="img/wizic.png" alt="" />
@@ -20,9 +18,6 @@ export default function project() {
                   <button className="py-2 px-4 bg-blue border border-white rounded-md my-4">VISITER</button>
                   </div>
               </div>
-
-
-             
             </div>
          </div>;
 }
