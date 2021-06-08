@@ -1,12 +1,26 @@
-import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
-import { useState, useEffect,FunctionComponent } from "react";
-import Image from 'next/image'
+import { useState, useEffect, FunctionComponent } from "react";
+import { session, signIn, signOut, useSession } from "next-auth/client";
+import Image from "next/image";
 
-
- const Navbar:FunctionComponent<IProps> = ({ isScroll }: IProps) =>{
+const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
   const [isMenu, setIsMenu] = useState<boolean>(false);
-  const [isModal, setIsModal] = useState<boolean>(false); 
+  const [isModal, setIsModal] = useState<boolean>(false);
+  const [session, loading] = useSession();
+  const [avatarImage, setAvatarImage] = useState(() => {
+    if (session) {
+      const stringUrl = session?.user?.image?.toString();
+      return stringUrl?.toString();
+    } else {
+      return "";
+    }
+  });
+
+  useEffect(() => {
+    if (session) {
+      setAvatarImage(session?.user?.image?.toString());
+    }
+  }, [session]);
 
   return (
     <div
@@ -95,36 +109,44 @@ import Image from 'next/image'
             className="border-b flex items-center justify-center align-middle hover:bg-indigo-900 bg-opacity-100 opacity-100 bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
           >
             Fermer
-            <img src="img/cross.png" className="w-5" alt="" />
+            <img src="img/cross.png" className="w-5 mx-4" alt="" />
           </li>
         </ul>
       )}
 
       <ul className="hidden md:flex ">
-        <li className="text-white items-center align-middle justify-center  flex mx-4 text-2xl">
-          <Image src="/img/home.png" width={23} height={20} />
+        <li className="text-white items-center align-middle justify-center  flex mx-2 text-2xl">
           <Link href="/">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg  border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg  border-transparent border-b">
               Accueil
             </button>
           </Link>
         </li>
-        <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <Image width={23} height={20} src="/img/avatar.png" />
+        <li className="text-white items-center align-middle justify-center flex mx-2 text-2xl">
           <Link href="/about">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg border-transparent border-b">
               A Propos
             </button>
           </Link>
         </li>
-        <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <Image width={23} height={20} src="/img/tv.png" />
+        <li className="text-white items-center align-middle justify-center flex mx-2 text-2xl">
           <Link href="/project/">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
           </Link>
-
+          <Link href="/login">
+            <button className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b">
+              Login
+            </button>
+          </Link>
+          <span className="text-lg mx-4">|</span>
+          <button
+            onClick={() => signOut()}
+            className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b"
+          >
+            Loggout
+          </button>
           <button
             className="outline-none focus:outline-none"
             onClick={() => setIsModal(true)}
@@ -136,9 +158,14 @@ import Image from 'next/image'
               alt=""
             />
           </button>
+          {session && (
+            <div className="rounded-xl">
+              <img className="w-11 imageborder" src={avatarImage}></img>
+            </div>
+          )}
         </li>
       </ul>
     </div>
   );
-}
-export default Navbar
+};
+export default Navbar;
