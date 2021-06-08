@@ -23,16 +23,18 @@ export default function myProject({
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.query;
+  const myId = Number(id);
+
   let project = await prisma.project.findUnique({
     where: {
-      id: parseInt(id),
+      id: myId,
     },
     include: {
       Pictures: true,
     },
   });
   console.log(project);
-  let { title, content, createdAt, Pictures } = project;
+  let { title, content, createdAt, Pictures }: IProject = project;
 
   createdAt = createdAt.toString();
 

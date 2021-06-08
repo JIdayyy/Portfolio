@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function project() {
   return (
     <div className="w-full h-full pt-40 flex flex-col  text-white items-center align-middle justify-center min-h-screen bg-perso">
-      <h1 className="text-2xl md:4xl">
+      <h1 className="text-3xl m-14 md:4xl">
         Mes <span className="text-blue my-7">Projets</span> Récents
       </h1>
       <div className="flex flex-col md:flex-row items-center align-middle justify-center">
@@ -18,7 +18,8 @@ export default function project() {
               Développé from scratch avec ReactJs.
             </p>
             <Link href="">
-              <button className="py-2 px-4 bg-blue border border-white rounded-md my-4">
+              <button className="py-2 flex items-center justify-center align-middle  px-4 bg-blue border border-white rounded-md my-4">
+                <img className="w-5 mx-2" src="/img/visit.png" alt="" />
                 VISITER
               </button>
             </Link>
@@ -33,7 +34,8 @@ export default function project() {
               camp aux voyageurs et surfeurs autour du monde.
             </p>
             <Link href="">
-              <button className="py-2 px-4 bg-blue border border-white rounded-md my-4">
+              <button className="py-2 px-4 flex items-center justify-center align-middle  bg-blue border border-white rounded-md my-4">
+                <img className="w-5 mx-2" src="/img/visit.png" alt="" />
                 VISITER
               </button>
             </Link>

@@ -10,15 +10,14 @@ interface IEvent {
   deltaY?: any;
 }
 
-
-
 interface IProject {
-  title: string,
-  content: string,
-  Pictures: Array<Picture>,
-  createdAt: Date,
+  id?: number;
+  title?: string;
+  content?: string;
+  Pictures?: Array<Picture>;
+  createdAt?: string;
 }
 
 interface Picture {
-   pictureUrl: string
+  pictureUrl: string;
 }

@@ -97,38 +97,35 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
             className="border-b flex items-center justify-center align-middle hover:bg-indigo-900 bg-opacity-100 opacity-100 bg-indigo-900 cursor-pointer border-indigo-900 py-5 text-center text-lg h-full w-full"
           >
             Fermer
-            <img src="img/cross.png" className="w-5" alt="" />
+            <img src="img/cross.png" className="w-5 mx-4" alt="" />
           </li>
         </ul>
       )}
 
       <ul className="hidden md:flex ">
-        <li className="text-white items-center align-middle justify-center  flex mx-4 text-2xl">
-          <Image src="/img/home.png" width={23} height={20} />
+        <li className="text-white items-center align-middle justify-center  flex mx-2 text-2xl">
           <Link href="/">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg  border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg  border-transparent border-b">
               Accueil
             </button>
           </Link>
         </li>
-        <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <Image width={23} height={20} src="/img/avatar.png" />
+        <li className="text-white items-center align-middle justify-center flex mx-2 text-2xl">
           <Link href="/about">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg border-transparent border-b">
               A Propos
             </button>
           </Link>
         </li>
-        <li className="text-white items-center align-middle justify-center flex mx-4 text-2xl">
-          <Image width={23} height={20} src="/img/tv.png" />
+        <li className="text-white items-center align-middle justify-center flex mx-2 text-2xl">
           <Link href="/project/">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-1 focus:outline-none text-lg border-transparent border-b">
               Project
             </button>
           </Link>
-          <Image src="/img/admin.png" width={20} height={20} />
+
           <Link href="/login">
-            <button className="hover:border-blue outline-none mx-3 focus:outline-none text-lg border-transparent border-b">
+            <button className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b">
               Admin
             </button>
           </Link>
