@@ -17,7 +17,7 @@ export default function project() {
               <br></br>
               Développé from scratch avec ReactJs.
             </p>
-            <Link href="">
+            <Link href="/project/2">
               <button className="py-2 flex items-center justify-center align-middle  px-4 bg-blue border border-white rounded-md my-4">
                 <img className="w-5 mx-2" src="/img/visit.png" alt="" />
                 VISITER
@@ -33,7 +33,7 @@ export default function project() {
               Un Site web AirBnB Like qui propose la mise à disposition de surf
               camp aux voyageurs et surfeurs autour du monde.
             </p>
-            <Link href="">
+            <Link href="/project/2">
               <button className="py-2 px-4 flex items-center justify-center align-middle  bg-blue border border-white rounded-md my-4">
                 <img className="w-5 mx-2" src="/img/visit.png" alt="" />
                 VISITER

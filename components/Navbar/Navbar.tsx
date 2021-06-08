@@ -1,4 +1,3 @@
-import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Link from "next/link";
 import { useState, useEffect, FunctionComponent } from "react";
 import { session, signIn, signOut, useSession } from "next-auth/client";
@@ -13,9 +12,15 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
       const stringUrl = session?.user?.image?.toString();
       return stringUrl?.toString();
     } else {
-      return "";
+      return "a";
     }
   });
+
+  useEffect(() => {
+    if (session) {
+      setAvatarImage(session?.user?.image?.toString());
+    }
+  }, [session]);
 
   return (
     <div

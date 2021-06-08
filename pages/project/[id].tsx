@@ -21,7 +21,6 @@ export default function myProject({
         />
         <div className="text-2xl  my-4">{title}</div>
         <div className="w-80 p-4 ">{content}</div>
-        <div className="text-xs  my-4">{createdAt}</div>
       </div>
     </div>
   );
@@ -42,16 +41,13 @@ export const getServerSideProps: GetServerSideProps<{
     },
   });
   console.log(project);
-  let { title, content, createdAt, Pictures }: IProject[] = project;
-
-  createdAt = createdAt.toString();
+  let { title, content, Pictures }: IProject[] = project;
 
   return {
     props: {
       title,
       content,
       Pictures,
-      createdAt,
     },
   };
 };
