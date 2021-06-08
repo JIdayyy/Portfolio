@@ -126,7 +126,7 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
 
           <Link href="/login">
             <button className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b">
-              Admin
+              Login
             </button>
           </Link>
 

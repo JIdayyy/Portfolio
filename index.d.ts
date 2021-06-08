@@ -11,11 +11,11 @@ interface IEvent {
 }
 
 interface IProject {
-  id?: number;
-  title?: string;
-  content?: string;
-  Pictures?: Array<Picture>;
-  createdAt?: string;
+  id?: number | null;
+  title?: string | null;
+  content?: string | null;
+  Pictures?: Array<Picture> | null;
+  createdAt?: string | null;
 }
 
 interface Picture {
