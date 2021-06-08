@@ -7,5 +7,6 @@ export default NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
       callbackUrl: "https://portfolio-jidayyy.vercel.app/api/auth/callback/github",
+      )}
   ],
 });
