@@ -1,7 +1,9 @@
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
 import Image from "next/image";
 import { GetServerSideProps } from "next";
+import type { Session } from "next-auth";
+
+const prisma = new PrismaClient();
 
 export default function myProject({
   title,
@@ -25,7 +27,9 @@ export default function myProject({
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps<{
+  session: Session | null;
+}> = async (context) => {
   const { id } = context.query;
   const myId = Number(id);
 
@@ -38,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   });
   console.log(project);
-  let { title, content, createdAt, Pictures }: IProject = project;
+  let { title, content, createdAt, Pictures }: IProject[] = project;
 
   createdAt = createdAt.toString();
 

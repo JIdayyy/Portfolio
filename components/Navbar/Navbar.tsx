@@ -3,13 +3,20 @@ import Link from "next/link";
 import { useState, useEffect, FunctionComponent } from "react";
 import { session, signIn, signOut, useSession } from "next-auth/client";
 import Image from "next/image";
-import image from "next/image";
 
 const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
   const [isMenu, setIsMenu] = useState<boolean>(false);
   const [isModal, setIsModal] = useState<boolean>(false);
   const [session, loading] = useSession();
-  console.log(loading, session);
+  const [avatarImage, setAvatarImage] = useState(() => {
+    if (session) {
+      const stringUrl = session?.user?.image?.toString();
+      return stringUrl?.toString();
+    } else {
+      return "";
+    }
+  });
+
   return (
     <div
       className={`${
@@ -123,13 +130,18 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
               Project
             </button>
           </Link>
-
           <Link href="/login">
             <button className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b">
               Login
             </button>
           </Link>
-
+          <span className="text-lg mx-4">|</span>
+          <button
+            onClick={() => signOut()}
+            className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b"
+          >
+            Loggout
+          </button>
           <button
             className="outline-none focus:outline-none"
             onClick={() => setIsModal(true)}
@@ -143,7 +155,7 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
           </button>
           {session && (
             <div className="rounded-xl">
-              <img className="w-11 imageborder" src={session.user.image}></img>
+              <img className="w-11 imageborder" src={avatarImage}></img>
             </div>
           )}
         </li>
