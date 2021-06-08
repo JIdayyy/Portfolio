@@ -12,7 +12,7 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
       const stringUrl = session?.user?.image?.toString();
       return stringUrl?.toString();
     } else {
-      return "a";
+      return "";
     }
   });
 
