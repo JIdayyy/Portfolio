@@ -3,12 +3,13 @@ import Link from "next/link";
 import { useState, useEffect, FunctionComponent } from "react";
 import { session, signIn, signOut, useSession } from "next-auth/client";
 import Image from "next/image";
+import image from "next/image";
 
 const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
   const [isMenu, setIsMenu] = useState<boolean>(false);
   const [isModal, setIsModal] = useState<boolean>(false);
   const [session, loading] = useSession();
-
+  console.log(loading, session);
   return (
     <div
       className={`${
@@ -131,7 +132,7 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
               Admin
             </button>
           </Link>
-          {session && session.user.name}
+
           <button
             className="outline-none focus:outline-none"
             onClick={() => setIsModal(true)}
@@ -143,6 +144,11 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
               alt=""
             />
           </button>
+          {session && (
+            <div className="rounded-xl">
+              <img className="w-11 imageborder" src={session.user.image}></img>
+            </div>
+          )}
         </li>
       </ul>
     </div>

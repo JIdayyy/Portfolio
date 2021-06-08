@@ -6,7 +6,10 @@ export default function login() {
     <div className="w-full text-white font-bold h-screen bg-mainColor flex-col  flex items-center align-middle justify-center">
       <p className="text-red-900">
         During deployment only github auth is working.
-        <button className="text-red-700 text-2xl mx-4" onClick={signIn}>
+        <button
+          className="text-red-700 text-2xl border border-red-400 rounded-md px-4 py-2 mx-4"
+          onClick={signIn}
+        >
           SIGN IN HERE !
         </button>
       </p>

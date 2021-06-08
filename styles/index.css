@@ -35,6 +35,10 @@
   background-image: url('/img/background.png');
 }
 
+.imageborder{
+  border-radius: 100px;
+}
+
 
 
   .wave {
