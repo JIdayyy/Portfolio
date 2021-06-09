@@ -159,13 +159,13 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
             />
           </button>
           {session && (
-            <div className=" text-xs flex item-center justify-center align-middle">
+            <div className=" text-sm flex item-center justify-center align-middle">
               <img
                 className="w-10 rounded-xl imageborder"
                 src={avatarImage}
               ></img>
-              {"-"}
-              <div className="flex items-center justify-center align-middle">
+
+              <div className="flex items-center mx-4 justify-center align-middle">
                 {session.user.name}
               </div>
             </div>
