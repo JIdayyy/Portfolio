@@ -165,7 +165,9 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
                 src={avatarImage}
               ></img>
               {"-"}
-              {session.user.name}
+              <div className="flex items-center justify-center align-middle">
+                {session.user.name}
+              </div>
             </div>
           )}
         </li>
