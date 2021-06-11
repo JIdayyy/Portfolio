@@ -14,7 +14,7 @@ export default function login() {
         </button>
       </p>
       <h1 className="my-10 text-4xl">
-        Logg<span className="text-blue">in</span>
+        Log<span className="text-blue">in</span>
       </h1>
       <form className="flex flex-col ">
         <label htmlFor="">Pseudo :</label>
