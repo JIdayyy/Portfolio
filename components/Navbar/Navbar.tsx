@@ -145,7 +145,7 @@ const Navbar: FunctionComponent<IProps> = ({ isScroll }: IProps) => {
             onClick={() => signOut()}
             className="hover:border-blue outline-none mx-4 focus:outline-none  text-lg border-transparent border-b"
           >
-            Loggout
+            Logout
           </button>
           <button
             className="outline-none focus:outline-none"
