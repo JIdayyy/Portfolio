@@ -3,7 +3,7 @@ export default function about() {
     <div className="px-9 w-full  h-full flex flex-col items-center align-middle justify-center  min-h-screen bg-perso">
       <div className="flex flex-col  md:flex-row  mt-40 w-full h-full items-center justify-center align-middle">
         <div className="text-white">
-          <h1 className="text-2xl md:text-3xl">
+          <h1 className="text-2xl md:text-2xl">
             Qui <span className="text-blue">suis</span> je ?
           </h1>
           <p className="my-2 text-lg md:text-xl">
@@ -42,34 +42,34 @@ export default function about() {
         <img className="w-64 my-6 mx-10" src="img/me.png" alt="" />
       </div>
       <div className="w-full text-white flex flex-col items-center align-middle justify-center ">
-        <h1 className="text-3xl flex items-center justify-center align-middle  w-full my-8">
+        <h1 className="text-xl md:text-2xl flex items-center justify-center align-middle  w-full my-8">
           Compétences <span className="mx-2 text-blue">Tech</span>{" "}
           <img className="w-5 xl:w-8 mx-4 wave" src="img/settings.png" alt="" />
         </h1>
 
-        <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-2 mb-24 grid-cols-4">
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md text-blue  items-center align-middle justify-center">
+        <div className="w-full lg:px-20 xl:px-32 2xl:px-52 text-xs grid grid-rows-2 mb-24 grid-cols-4">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8  rounded-md text-blue  items-center align-middle justify-center">
             HTML/CSS
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8  rounded-md  items-center align-middle justify-center">
             JS.
           </div>
-          <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
+          <div className="flex border text-blue md:text-2xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
             TypeScript.
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8  rounded-md  items-center align-middle justify-center">
             ReactJs
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8  rounded-md  items-center align-middle justify-center">
             NextJs
           </div>
-          <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
+          <div className="flex border text-blue md:text-2xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
             NodeJs
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8  rounded-md  items-center align-middle justify-center">
             Express
           </div>
-          <div className="flex border text-blue md:text-3xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
+          <div className="flex border text-blue md:text-2xl md:py-8  p-2 m-2 rounded-md  items-center align-middle justify-center">
             Prisma
           </div>
         </div>
@@ -79,18 +79,18 @@ export default function about() {
           <img className="w-5 xl:w-8 wave mx-4" src="img/tool.png" alt="" />
         </h1>
         <div className="w-full lg:px-20 xl:px-32 2xl:px-52 grid grid-rows-1 mb-24 grid-cols-4">
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8 text-xs  rounded-md text-blue  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8 text-xs  rounded-md text-blue  items-center align-middle justify-center">
             VS CODE
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8 text-xs  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8 text-xs  rounded-md  items-center align-middle justify-center">
             Figma
           </div>
-          <div className="flex border text-blue md:text-3xl md:py-8 text-xs  p-2 m-2 rounded-md  items-center align-middle justify-center">
+          <div className="flex border text-blue md:text-2xl md:py-8 text-xs  p-2 m-2 rounded-md  items-center align-middle justify-center">
             Windows
             <br></br>
             OSX
           </div>
-          <div className="flex border p-2 m-2 md:text-3xl md:py-8 text-xs  rounded-md  items-center align-middle justify-center">
+          <div className="flex border p-2 m-2 md:text-2xl md:py-8 text-xs  rounded-md  items-center align-middle justify-center">
             Linux
           </div>
         </div>
